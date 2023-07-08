@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_412_P3_EX_V2.MVVM.Views.SemestreView"
+             >
+    <VerticalStackLayout HorizontalOptions="Center" Spacing="20">
+        <Label
+            Text="{Binding LblMateria}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Margin="0,25,0,10"
+            FontSize="60"
+            TextColor="#207178"
+            FontFamily="Comication"
+            />
+
+        <HorizontalStackLayout Spacing="10" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="Materia: " VerticalOptions="Center" FontSize="16"/>
+            <Entry Placeholder="Inserta el nombre de la materia" Text="{Binding TxtMateria}"/>
+            <Button Text="Ok" Command="{Binding CmdMateria}"/>
+        </HorizontalStackLayout>
+
+
+        <BoxView WidthRequest="400" HeightRequest="3" Margin="0,20,0,-15" Color="#207178"/>
+
+        <Label Text="Parciales" HorizontalOptions="Center" FontSize="18" Margin="0,15,0,0"/>
+        <Label Text="Averigua que calificación necesitas para sacar 6 y 10 final:)" HorizontalOptions="Center" FontSize="12" Margin="0,-10,0,0"/>
+
+        <HorizontalStackLayout Spacing="10" Margin="0,0,0,0" HorizontalOptions="Center">
+            <Label Text="Parcial" FontSize="12" Margin="-40,0,0,0"/>
+            <Label Text="Valor" FontSize="12" Margin="34,0,0,0"/>
+            <Label Text="Calif." FontSize="12" Margin="22,0,0,0"/>
+
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Label  WidthRequest="80" Text="Parcial 1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="   %" WidthRequest="50" Text="{Binding TxtValor1}"/>
+            <Entry Placeholder="Calificación" WidthRequest="100" Text="{Binding TxtCalificacion1}"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Label WidthRequest="80" Text="Parcial 2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="   %" WidthRequest="50" Text="{Binding TxtValor2}"/>
+            <Entry Placeholder="Calificación"  WidthRequest="100" Text="{Binding TxtCalificacion2}"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Label WidthRequest="80" Text="Parcial 3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="   %" WidthRequest="50" Text="{Binding TxtValor3}"/>
+            <Label WidthRequest="110" Text="{Binding LblCalificacion3}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#dc6378"/>
+        </HorizontalStackLayout>
+
+        <Label Text="{Binding LblCalificacion6}" HorizontalOptions="Center" Margin="0,-10,0,0" TextColor="#207178"/>
+
+
+        <BoxView WidthRequest="400" HeightRequest="3" Margin="0,5,0,5" Color="#207178"/>
+
+        <Button Text="Calcular" Command="{Binding CmdCalcular}"/>
+
+
+        <Label Text="{Binding LblMensaje}" FontSize="24" HorizontalOptions="Center" Margin="0,10,0,0" TextColor="#dc6378" FontFamily="Comication"/>
+
+        <Image Source="calculadora.png" WidthRequest="80" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,-205,0,0"/>
+    </VerticalStackLayout>
+</ContentPage>
